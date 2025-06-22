@@ -61,3 +61,26 @@ Ruby LSP> Command: ((bundle check && bundle update ruby-lsp debug) || bundle ins
 The Gemfile's dependencies are satisfied
 (...)
 ```
+
+## Ruby environment managers
+
+I get the following details in **VS Code → Output → Ruby LSP** window:
+
+```
+2025-06-22 11:11:54.444 [info] (ruby-walkthrough) Checking if chruby is available on the path with command: /bin/bash -i -c 'chruby --version'
+2025-06-22 11:11:55.468 [info] (ruby-walkthrough) Checking if rbenv is available on the path with command: /bin/bash -i -c 'rbenv --version'
+2025-06-22 11:11:56.491 [info] (ruby-walkthrough) Checking if rvm is available on the path with command: /bin/bash -i -c 'rvm --version'
+2025-06-22 11:11:57.512 [info] (ruby-walkthrough) Checking if asdf is available on the path with command: /bin/bash -i -c 'asdf --version'
+2025-06-22 11:11:58.534 [info] (ruby-walkthrough) Discovered version manager none
+(...)
+```
+
+References:
+
+- [chruby 2.9k :star:](https://github.com/postmodern/chruby): Changes the current Ruby
+- [rbenv 16.4k :star:](https://github.com/rbenv/rbenv): Manage your app's Ruby environment
+  - The one recomended by [Ruby in Visual Studio Code](https://code.visualstudio.com/docs/languages/ruby)
+- [rvm](https://rvm.io/): Ruby Version Manager
+- [asdf 699 :star:](https://github.com/asdf-vm/asdf-ruby): Ruby plugin for asdf version manager
+  - [asdfThe Multiple Runtime Version Manager](https://asdf-vm.com/): Manage all your runtime versions with one tool!
+    - [asdf on GitHub 23.8k :star:](https://github.com/asdf-vm/asdf)

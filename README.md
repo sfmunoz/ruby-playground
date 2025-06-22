@@ -84,3 +84,5 @@ References:
 - [asdf 699 :star:](https://github.com/asdf-vm/asdf-ruby): Ruby plugin for asdf version manager
   - [asdfThe Multiple Runtime Version Manager](https://asdf-vm.com/): Manage all your runtime versions with one tool!
     - [asdf on GitHub 23.8k :star:](https://github.com/asdf-vm/asdf)
+
+**rbenv** includes a detailed [Comparison of version managers](https://github.com/rbenv/rbenv/wiki/Comparison-of-version-managers): rbenv, chruby, direnv, asdf, rtx, frum, RVM and Containerized architecture

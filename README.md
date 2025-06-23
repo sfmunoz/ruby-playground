@@ -25,9 +25,9 @@ My choice: I'll install **Ruby** to get **Ruby LSP** and **Ruby Sorbet** install
 
 **Notice**: when enabled both **Spinel** and **Spinel Light** themes are suggested as they seem to work well with **Ruby**
 
-### Tuning for Linux Mint
+### Tuning for Linux Mint 22.1
 
-Provided that I'm using [Linux Mint](https://linuxmint.com/) and the current **Ruby** version is **3.0.2** I had to do the following to make **ruby-lsp** work.
+Provided that I'm using [Linux Mint 22.1](https://linuxmint.com/) and the current **Ruby** version is **3.2.3** I had to make the following tweaks to make **ruby-lsp** work.
 
 **(1)** Install **ruby-dev** to be able to install **ruby-lsp**:
 
@@ -38,7 +38,7 @@ $ gem install ruby-lsp
 
 `gem install ruby-lsp` fails when **ruby-dev** is not available.
 
-**(2)** Provide a **bundle** command since **bundle3.0** is the only available on **Linux Mint**:
+**(2)** Provide a **bundle** command since **bundle3.2** is the only available on **Linux Mint 22.1**:
 
 ```
 $ cat ~/.bashrc
@@ -47,7 +47,7 @@ export GEM_HOME="${HOME}/lib/ruby"
 PATH="${GEM_HOME}/bin:${PATH}"
 (...)
 
-$ ln -s /usr/bin/bundle3.0 $GEM_HOME/bin/bundle
+$ ln -s /usr/bin/bundle3.2 $GEM_HOME/bin/bundle
 ```
 
 With the previous tweaks **ruby-lsp** is able to start:

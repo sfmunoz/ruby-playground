@@ -86,3 +86,38 @@ References:
     - [asdf on GitHub 23.8k :star:](https://github.com/asdf-vm/asdf)
 
 **rbenv** includes a detailed [Comparison of version managers](https://github.com/rbenv/rbenv/wiki/Comparison-of-version-managers): rbenv, chruby, direnv, asdf, rtx, frum, RVM and Containerized architecture
+
+## irb: interactive Ruby
+
+**irb** integrated help is very useful:
+
+- irb: start the interactive Ruby session (REPL)
+- tab / shift-tab: show the help window and move up and down
+- alt + d: show a full document with help
+
+Example for **ARGV** (full document would be shown on **Alt+d**):
+
+```
+$ irb
+irb(main):001:0> ARGF
+                 !                     Press Alt+d to read the full document
+                 !=                    ARGF < Object
+                 !~
+                 <=>                   ----------------------------------------
+                 ==                    Includes:
+                 ===                   Enumerable (from ruby core)
+                 ARGF
+                 ARGV ················ (from ruby core)
+                 ArgumentError         ----------------------------------------
+                 Array                 ARGF is a stream designed for use in
+                 BEGIN                 scripts that process files given as
+                 BasicObject           command-line arguments or passed in via
+                 Binding               STDIN.
+                 CGI
+                 CROSS_COMPILING       The arguments passed to your script are
+                                       stored in the ARGV Array, one
+                                       argument per element. ARGF assumes that
+                                       any arguments that aren't filenames have
+                                       been removed from ARGV. For
+                                       example:
+```

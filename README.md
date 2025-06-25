@@ -2,11 +2,134 @@
 
 It's been a while since I first learned **Ruby**. Now I want to use it again so I'm creating this project to use for learning and for future reference.
 
-## Starting point
+## Initial reference
 
 [Ruby Programming by Derek Banas](https://www.youtube.com/watch?v=Dji9ALCgfpM): even though it's a 2015 video it's fast, cuts to the chase and it's clutter-free.
 
-> [Ruby Programming Tutorial by Derek Banas](https://www.newthinktank.com/2015/02/ruby-programming-tutorial/): used in the video
+> [Ruby Programming Tutorial by Derek Banas](https://www.newthinktank.com/2015/02/ruby-programming-tutorial/): the code used in the video
+
+## GEM_HOME and PATH setup
+
+It's where the **gems** are going to be locally installed:
+```
+$ cat ~/.bashrc
+(...)
+export GEM_HOME="${HOME}/lib/ruby"
+PATH="${GEM_HOME}/bin:${PATH}"
+(...)
+```
+
+## bundler
+
+On **Linux Mint 22.1** with **GEM_HOME=~/lib/ruby**:
+```
+$ dpkg -S /usr/lib/ruby/3.2.0/bundler
+libruby3.2:amd64: /usr/lib/ruby/3.2.0/bundler
+
+$ which bundle bundler bundle3.2 bundler3.2
+bundle not found
+bundler not found
+/bin/bundle3.2
+/bin/bundler3.2
+```
+My home:
+```
+$ ls ~/lib/ruby
+ls: cannot access '/home/sfm/lib/ruby': No such file or directory
+
+$ gem list -l | wc -l
+91
+
+$ gem list -l | grep ^bundler
+bundler (default: 2.4.19)
+```
+bundler upgrade (install to **GEM_HOME=~/lib/ruby**):
+```
+$ gem install bundler
+Fetching bundler-2.6.9.gem
+Successfully installed bundler-2.6.9
+Parsing documentation for bundler-2.6.9
+Installing ri documentation for bundler-2.6.9
+Done installing documentation for bundler after 0 seconds
+1 gem installed
+
+$ gem list -l | wc -l
+91
+
+$ gem list -l | grep ^bundler
+bundler (2.6.9, default: 2.4.19)
+
+$ ls -l ~/lib/ruby/bin
+total 8
+-rwxr-xr-x 1 sfm sfm 563 Jun 25 18:18 bundle
+-rwxr-xr-x 1 sfm sfm 565 Jun 25 18:18 bundler
+
+$ which bundle bundler bundle3.2 bundler3.2
+/home/sfm/lib/ruby/bin/bundle
+/home/sfm/lib/ruby/bin/bundler
+/bin/bundle3.2
+/bin/bundler3.2
+```
+From [https://bundler.io/](https://bundler.io/):
+- **Gemfile**:
+```
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'rack', '~> 2.2.4'
+gem 'rspec'
+```
+- Install gems defined by **Gemfile**:
+```
+$ bundle install
+$ git add Gemfile Gemfile.lock
+```
+
+## ruby-lsp
+```
+$ sudo apt install ruby-dev
+
+$ gem install ruby-lsp
+(...)
+Successfully installed sorbet-runtime-0.5.12201
+(...)
+Successfully installed rbs-3.9.4
+(...)
+Successfully installed prism-1.4.0
+Successfully installed language_server-protocol-3.17.0.5
+Successfully installed ruby-lsp-0.24.2
+(...)
+5 gems installed
+```
+`gem install ruby-lsp` fails when **ruby-dev** is not available.
+
+Result (just **bin**):
+```
+$ ls -l ~/lib/ruby/bin
+total 28
+-rwxr-xr-x 1 sfm sfm 563 Jun 25 18:18 bundle
+-rwxr-xr-x 1 sfm sfm 565 Jun 25 18:18 bundler
+-rwxr-xr-x 1 sfm sfm 524 Jun 25 18:25 rbs
+-rwxr-xr-x 1 sfm sfm 554 Jun 25 18:26 ruby-lsp
+-rwxr-xr-x 1 sfm sfm 566 Jun 25 18:26 ruby-lsp-check
+-rwxr-xr-x 1 sfm sfm 572 Jun 25 18:26 ruby-lsp-launcher
+-rwxr-xr-x 1 sfm sfm 574 Jun 25 18:26 ruby-lsp-test-exec
+```
+Command line execution:
+```
+$ ruby-lsp
+Ruby LSP> Skipping lockfile copies because there's no top level bundle
+Ruby LSP> Running bundle install for the composed bundle. This may take a while...
+Ruby LSP> Command: ((bundle check && bundle update ruby-lsp debug) || bundle install) 1>&2
+The following gems are missing
+ * sorbet-runtime (0.5.12196)
+Install missing gems with `bundle install`
+Fetching gem metadata from https://rubygems.org/..........
+Fetching sorbet-runtime 0.5.12196
+Installing sorbet-runtime 0.5.12196
+Bundle complete! 2 Gemfile dependencies, 11 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+(...)
+```
 
 ## VS Code extensions
 
@@ -24,43 +147,6 @@ It's as simple as searching for **ruby** within **VS Code**:
 My choice: I'll install **Ruby** to get **Ruby LSP** and **Ruby Sorbet** installed
 
 **Notice**: when enabled both **Spinel** and **Spinel Light** themes are suggested as they seem to work well with **Ruby**
-
-### Tuning for Linux Mint 22.1
-
-Provided that I'm using [Linux Mint 22.1](https://linuxmint.com/) and the current **Ruby** version is **3.2.3** I had to make the following tweaks to make **ruby-lsp** work.
-
-**(1)** Install **ruby-dev** to be able to install **ruby-lsp**:
-
-```
-$ sudo apt install ruby-dev
-$ gem install ruby-lsp
-```
-
-`gem install ruby-lsp` fails when **ruby-dev** is not available.
-
-**(2)** Provide a **bundle** command since **bundle3.2** is the only available on **Linux Mint 22.1**:
-
-```
-$ cat ~/.bashrc
-(...)
-export GEM_HOME="${HOME}/lib/ruby"
-PATH="${GEM_HOME}/bin:${PATH}"
-(...)
-
-$ ln -s /usr/bin/bundle3.2 $GEM_HOME/bin/bundle
-```
-
-With the previous tweaks **ruby-lsp** is able to start:
-
-```
-$ ruby-lsp
-ruby-lsp
-Ruby LSP> Skipping lockfile copies because there's no top level bundle
-Ruby LSP> Running bundle install for the composed bundle. This may take a while...
-Ruby LSP> Command: ((bundle check && bundle update ruby-lsp debug) || bundle install) 1>&2
-The Gemfile's dependencies are satisfied
-(...)
-```
 
 ## Ruby environment managers
 

@@ -2,6 +2,14 @@
 
 It's been a while since I first learned **Ruby**. Now I want to use it again so I'm creating this project to use for learning and for future reference.
 
+- [Initial reference](#initial-reference)
+- [GEM_HOME and PATH setup](#gem_home-and-path-setup)
+- [bundler](#bundler)
+- [ruby-lsp](#ruby-lsp)
+- [VS Code extensions](#vs-code-extensions)
+- [Ruby environment managers](#ruby-environment-managers)
+- [irb: interactive Ruby](#irb-interactive-ruby)
+
 ## Initial reference
 
 [Ruby Programming by Derek Banas](https://www.youtube.com/watch?v=Dji9ALCgfpM): even though it's a 2015 video it's fast, cuts to the chase and it's clutter-free.

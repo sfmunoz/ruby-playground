@@ -2,6 +2,7 @@
 
 It's been a while since I first learned **Ruby**. Now I want to use it again so I'm creating this project to use for learning and for future reference.
 
+- [TL;DR](#tldr)
 - [References](#references)
 - [GEM_HOME and PATH setup](#gem_home-and-path-setup)
 - [bundler](#bundler)
@@ -9,6 +10,15 @@ It's been a while since I first learned **Ruby**. Now I want to use it again so 
 - [VS Code extensions](#vs-code-extensions)
 - [Ruby environment managers](#ruby-environment-managers)
 - [irb: interactive Ruby](#irb-interactive-ruby)
+
+## TL;DR
+
+```
+$ git clone https://github.com/sfmunoz/ruby-walkthrough.git
+$ cd ruby-walkthrough
+$ ruby wt.rb
+=> select example and press <ENTER> to run it
+```
 
 ## References
 

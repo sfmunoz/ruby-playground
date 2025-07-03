@@ -8,7 +8,7 @@ end
 
 def run_file(rb_file)
   puts("======== #{rb_file} ========")
-  code = File.read(rb_file)
+  code = File.read("examples/" + rb_file)
   puts code
   puts("-------- #{rb_file} --------")
   print "Press <ENTER> to run it..."

@@ -2,7 +2,7 @@
 
 It's been a while since I first learned **Ruby**. Now I want to use it again so I'm creating this project to use for learning and for future reference.
 
-- [Initial reference](#initial-reference)
+- [References](#references)
 - [GEM_HOME and PATH setup](#gem_home-and-path-setup)
 - [bundler](#bundler)
 - [ruby-lsp](#ruby-lsp)
@@ -10,11 +10,11 @@ It's been a while since I first learned **Ruby**. Now I want to use it again so 
 - [Ruby environment managers](#ruby-environment-managers)
 - [irb: interactive Ruby](#irb-interactive-ruby)
 
-## Initial reference
+## References
 
-[Ruby Programming by Derek Banas](https://www.youtube.com/watch?v=Dji9ALCgfpM): even though it's a 2015 video it's fast, cuts to the chase and it's clutter-free.
-
-> [Ruby Programming Tutorial by Derek Banas](https://www.newthinktank.com/2015/02/ruby-programming-tutorial/): the code used in the video
+- [Ruby Programming by Derek Banas](https://www.youtube.com/watch?v=Dji9ALCgfpM): even though it's a 2015 video it's fast, cuts to the chase and it's clutter-free.
+  - [Ruby Programming Tutorial by Derek Banas](https://www.newthinktank.com/2015/02/ruby-programming-tutorial/): the code used in the video
+- [Ruby From Other Languages](https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/): points out the major resemblances and differences with other languages (Perl, Python, Java, ...)
 
 ## GEM_HOME and PATH setup
 

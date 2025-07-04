@@ -9,6 +9,7 @@ RB_FILES = [
   "loop-for.rb",
   "functions.rb",
   "exceptions.rb",
+  "strings.rb",
   "objects1.rb",
   "objects2.rb",
   "files1.rb",

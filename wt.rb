@@ -13,6 +13,7 @@ RB_FILES = [
   "objects1.rb",
   "objects2.rb",
   "polymorphism.rb",
+  "mod0.rb",
   "symbols.rb",
   "arrays.rb",
   "hashes.rb",

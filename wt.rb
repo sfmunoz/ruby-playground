@@ -1,4 +1,5 @@
 RB_FILES = [
+  "data_types.rb",
   "exceptions.rb",
   "objects1.rb",
   "objects2.rb",

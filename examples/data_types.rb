@@ -1,0 +1,13 @@
+one = "1".to_i
+two = "2".to_i
+puts "#{one} + #{two} = " + (one+two).to_s
+puts "#{one} - #{two} = " + (one-two).to_s
+puts "#{one} * #{two} = " + (one*two).to_s
+puts "#{one} / #{two} = " + (one/two).to_s
+puts "#{one} % #{two} = " + (one%two).to_s
+puts "1 - 0.999 = " + (1-0.999).to_s
+puts "1.class = " + 1.class.to_s
+puts "1.234.class = " + 1.234.class.to_s
+puts "\"\".class = " + "".class.to_s
+A_CONSTANT = 3.14
+puts "A_CONSTANT = " + A_CONSTANT.to_s

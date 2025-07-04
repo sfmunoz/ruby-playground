@@ -16,9 +16,17 @@ It's been a while since I first learned **Ruby**. Now I want to use it again so 
 
 ```
 $ git clone https://github.com/sfmunoz/ruby-walkthrough.git
+
 $ cd ruby-walkthrough
-$ ruby wt.rb
-=> select example and press <ENTER> to run it
+
+$ ruby wt.rb 
+  0. data_types.rb           1. if-elsif-else.rb        2. case-when.rb            3. ternary-operator.rb   
+  4. loop.rb                 5. loop-while.rb           6. loop-until.rb           7. loop-for.rb           
+  8. functions.rb            9. exceptions.rb          10. strings.rb             11. objects1.rb           
+ 12. objects2.rb            13. polymorphism.rb        14. mod0.rb                15. symbols.rb            
+ 16. arrays.rb              17. hashes.rb              18. enumerable.rb          19. files1.rb             
+ 20. files2.rb             
+Choose file to run (<ENTER> to exit):
 ```
 
 ## References

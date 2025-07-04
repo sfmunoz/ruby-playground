@@ -1,4 +1,10 @@
-RB_FILES = ["objects1.rb", "objects2.rb", "files1.rb", "files2.rb"]
+RB_FILES = [
+  "exceptions.rb",
+  "objects1.rb",
+  "objects2.rb",
+  "files1.rb",
+  "files2.rb",
+]
 
 class String
   def is_integer?

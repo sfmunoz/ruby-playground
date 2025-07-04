@@ -8,6 +8,7 @@ It's been a while since I first learned **Ruby**. Now I want to use it again so 
 - [bundler](#bundler)
 - [ruby-lsp](#ruby-lsp)
 - [VS Code extensions](#vs-code-extensions)
+- [Neovim with kickstart.nvim](#neovim-with-kickstartnvim)
 - [Ruby environment managers](#ruby-environment-managers)
 - [irb: interactive Ruby](#irb-interactive-ruby)
 
@@ -165,6 +166,23 @@ It's as simple as searching for **ruby** within **VS Code**:
 My choice: I'll install **Ruby** to get **Ruby LSP** and **Ruby Sorbet** installed
 
 **Notice**: when enabled both **Spinel** and **Spinel Light** themes are suggested as they seem to work well with **Ruby**
+
+## Neovim with kickstart.nvim
+
+Ref: [https://github.com/sfmunoz/kickstart.nvim/commit/08c23e528bb0494edbbf9c6fd4093222e4b086d5](https://github.com/sfmunoz/kickstart.nvim/commit/08c23e528bb0494edbbf9c6fd4093222e4b086d5) (repo originally forked from [https://github.com/nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim))
+
+Enable **ruby_lsp** on **kickstart.nvim/init.lua** to be installed by [Mason](https://github.com/mason-org/mason.nvim):
+
+```diff
+@@ -625,6 +625,7 @@ require('lazy').setup({
+        -- clangd = {},
+        gopls = {},
+        pyright = {},
++       ruby_lsp = {},
+        -- rust_analyzer = {},
+        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+        --
+```
 
 ## Ruby environment managers
 

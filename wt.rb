@@ -13,6 +13,7 @@ RB_FILES = [
   "objects1.rb",
   "objects2.rb",
   "polymorphism.rb",
+  "symbols.rb",
   "files1.rb",
   "files2.rb",
 ]

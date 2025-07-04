@@ -15,6 +15,7 @@ RB_FILES = [
   "polymorphism.rb",
   "symbols.rb",
   "arrays.rb",
+  "hashes.rb",
   "files1.rb",
   "files2.rb",
 ]

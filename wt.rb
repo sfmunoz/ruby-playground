@@ -16,6 +16,7 @@ RB_FILES = [
   "symbols.rb",
   "arrays.rb",
   "hashes.rb",
+  "enumerable.rb",
   "files1.rb",
   "files2.rb",
 ]

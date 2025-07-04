@@ -2,6 +2,7 @@ RB_FILES = [
   "data_types.rb",
   "if-elsif-else.rb",
   "case-when.rb",
+  "ternary-operator.rb",
   "exceptions.rb",
   "objects1.rb",
   "objects2.rb",

@@ -28,6 +28,16 @@ class String
   end
 end
 
+def menu_print(cols)
+  col_step = 8 + RB_FILES.max_by {|s| s.length}.length
+  tot = RB_FILES.length
+  RB_FILES.each_with_index do |rb_file, i|
+    x = sprintf "%3d. %s",i,rb_file
+    print x.ljust(col_step,' ')
+    if i % cols == cols - 1 or i == tot - 1 then puts end
+  end
+end
+
 def run_file(rb_file)
   puts("======== #{rb_file} ========")
   code = File.read("examples/" + rb_file)
@@ -41,11 +51,7 @@ def run_file(rb_file)
 end
 
 loop do
-  i = 0
-  for rb_file in RB_FILES
-    printf "%3d. %s\n",i,rb_file
-    i += 1
-  end
+  menu_print(4)
   print "Choose file to run (<ENTER> to exit): "
   input = gets.chomp
   if input.length == 0 then

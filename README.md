@@ -19,7 +19,7 @@ $ git clone https://github.com/sfmunoz/ruby-playground.git
 
 $ cd ruby-playground
 
-$ ruby wt.rb 
+$ ruby playground.rb
   0. data_types.rb           1. if-elsif-else.rb        2. case-when.rb            3. ternary-operator.rb   
   4. loop.rb                 5. loop-while.rb           6. loop-until.rb           7. loop-for.rb           
   8. functions.rb            9. exceptions.rb          10. strings.rb             11. objects1.rb           

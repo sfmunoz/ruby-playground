@@ -1,4 +1,4 @@
-# ruby-walkthrough
+# ruby-playground
 
 It's been a while since I first learned **Ruby**. Now I want to use it again so I'm creating this project to use for learning and for future reference.
 
@@ -15,9 +15,9 @@ It's been a while since I first learned **Ruby**. Now I want to use it again so 
 ## TL;DR
 
 ```
-$ git clone https://github.com/sfmunoz/ruby-walkthrough.git
+$ git clone https://github.com/sfmunoz/ruby-playground.git
 
-$ cd ruby-walkthrough
+$ cd ruby-playground
 
 $ ruby wt.rb 
   0. data_types.rb           1. if-elsif-else.rb        2. case-when.rb            3. ternary-operator.rb   
@@ -197,11 +197,11 @@ Enable **ruby_lsp** on **kickstart.nvim/init.lua** to be installed by [Mason](ht
 I get the following details in **VS Code → Output → Ruby LSP** window:
 
 ```
-2025-06-22 11:11:54.444 [info] (ruby-walkthrough) Checking if chruby is available on the path with command: /bin/bash -i -c 'chruby --version'
-2025-06-22 11:11:55.468 [info] (ruby-walkthrough) Checking if rbenv is available on the path with command: /bin/bash -i -c 'rbenv --version'
-2025-06-22 11:11:56.491 [info] (ruby-walkthrough) Checking if rvm is available on the path with command: /bin/bash -i -c 'rvm --version'
-2025-06-22 11:11:57.512 [info] (ruby-walkthrough) Checking if asdf is available on the path with command: /bin/bash -i -c 'asdf --version'
-2025-06-22 11:11:58.534 [info] (ruby-walkthrough) Discovered version manager none
+2025-06-22 11:11:54.444 [info] (ruby-playground) Checking if chruby is available on the path with command: /bin/bash -i -c 'chruby --version'
+2025-06-22 11:11:55.468 [info] (ruby-playground) Checking if rbenv is available on the path with command: /bin/bash -i -c 'rbenv --version'
+2025-06-22 11:11:56.491 [info] (ruby-playground) Checking if rvm is available on the path with command: /bin/bash -i -c 'rvm --version'
+2025-06-22 11:11:57.512 [info] (ruby-playground) Checking if asdf is available on the path with command: /bin/bash -i -c 'asdf --version'
+2025-06-22 11:11:58.534 [info] (ruby-playground) Discovered version manager none
 (...)
 ```
 

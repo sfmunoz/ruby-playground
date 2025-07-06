@@ -1,4 +1,4 @@
-# ruby-playground
+# Ruby playground
 
 It's been a while since I first learned **Ruby**. Now I want to use it again so I'm creating this project to use for learning and for future reference.
 
